@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ростик_2023</title>
+        <style>
+            li {
+                margin-bottom: 1em;
+            }
+            div {
+                margin-top: 1em;
+            }
+        </style>
+        </head>
+
+    <body>
+        <header><h2>Список задач<h2></header>
+        <form id="task-form">
+            <input
+                type="text"
+                pattern="^[a-zA-Z-А-Яа-яЁё\s]+$"
+                id="task-input"
+                placeholder="Добавьте новую задачу"/>
+            <input
+                type="submit"
+                id="task-submit"
+                value="Добавить"/>
+                <div class="settings">
+                    <label>Фильтр:</label>
+                    <select name="Фильтр" id="filter" selected="selected">
+                    <option value="all-tasks">Все задачи</option>
+                    <option value="in-process-tasks">Выполняемые</option>
+                    <option value="done-tasks">Сделанные</option>
+                    </select>
+                    <label>Сортировка:</label>
+                    <select name="Сортировка" id="sort" selected="selected">
+                    <option value="ASC-sort">По возрастанию</option>
+                    <option value="DESC-sort">По убыванию</option>
+                    </select>
+                </div>
+        </form>
+
+        <main>
+            <h3>Мои задачи</h3>
+            <div class="tasks">
+                    
+                <ul id="tasksList">
+
+                </ul>
+
+            </div>
+        </main>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
